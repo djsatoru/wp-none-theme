@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*
+Theme Name: None
+Description: WordPressの開発ベース用テーマ。必要最低限のファイルのみの構成。
+Author: djsatoru
+Author URI: https://github.com/djsatoru
+Version: 0.1
+*/
+
+@import "./scss/reset";
+@import "./scss/functions";
+
+@import "./scss/xs";
+.pc-only{ display: none; }
+.sp-only{ display: block; }
+
+// md size
+@media screen and (min-width: 768px) {
+	@import "./scss/md";
+	.pc-only{ display: block; }
+	.sp-only{ display: none; }
+}

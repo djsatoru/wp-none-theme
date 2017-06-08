@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+//一般的に使われるカラーコード
+$facebook-color: #3b5998;
+
+//Font AwesomeのCSS挿入
+@mixin awesome($code){
+	content: $code;
+	font-family: FontAwesome;
+}
+
+//角丸のCSS挿入
+@mixin radius($val: 10px){
+	border-radius: $val;        /* CSS3草案 */
+	-webkit-border-radius: $val;    /* Safari,Google Chrome用 */
+	-moz-border-radius: $val;   /* Firefox用 */
+}
+
+//回転のcss挿入
+@mixin rotate($val: 10deg){
+	//the rotate effect can't be worked on IE
+	-webkit-transform: rotate($val);
+	-moz-transform: rotate($val);
+	-o-transform: rotate($val);
+	-ms-transform: rotate($val);
+	transform: rotate($val);	
+}
